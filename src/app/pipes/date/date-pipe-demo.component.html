@@ -1,0 +1,50 @@
+<div class="pad-def bg-default bor-b-def">
+    <h2 class="no-margin">日期格式化<small class="font-xs text-disabled mar-l-xs">pipe</small></h2>
+</div>
+<div class="wrapper-md">
+    <p class="h4 m-b-sm block text-primary">示例</p>
+    <ul class="mar-b-sm bg-white pad-def bor-def">
+        <li class="mar-b-xs">
+            <b>原值：</b>2017/12/31 23:59:59
+        </li>
+        <li class="mar-b-xs">
+            <b>例1：</b>{{'2017/12/31 23:59:59'|date:'yyyy-MM-dd hh:mm:ss'}}
+        </li>
+        <li class="mar-b-xs">
+            <b>例2：</b>{{'2017/12/31 23:59:59'|date:'yyyy年MM月dd日 hh时mm分ss秒'}}
+        </li>
+        <li class="mar-b-xs">
+            <b>例3：</b>{{'2017/12/31 23:59:59'|date:'yyyy-MM-dd'}}
+        </li>
+        <li class="mar-b-xs">
+            <b>例4：</b>{{1532768400000|date:'yyyy-MM-dd'}}
+        </li>
+        <li class="mar-b-xs">
+            <b>...</b>
+        </li>
+    </ul>
+
+    <code-high-light maxHeight="500px" language="html" codeSrc="./assets/sources/date-pipe-demo/date-pipe-demo.component.html"></code-high-light>
+    <p class="h4 m-b-sm block text-primary">参数</p>
+    <div class="over-auto">
+        <table class="table table-bordered bg-white">
+            <thead class="bg-default">
+                <tr>
+                    <th>参数名</th>
+                    <th>类型</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>format</td>
+                    <td>string</td>
+                    <td>
+                        格式。yyyy或YYYY代表年，MM代表月，dd或DD代表日，hh或HH代表时，mm代表分，ss或SS代表秒； 如：yyyy年MM月dd日 hh时mm分ss秒、yyyy-MM-dd hh:mm:ss
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="h6 m-b-sm block text-primary">From:<span class="text-disabled">DateFormatModule/DatePipe</span></p>
+</div>

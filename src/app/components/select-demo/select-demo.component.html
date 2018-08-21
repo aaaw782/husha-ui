@@ -1,0 +1,50 @@
+<div class="pad-def bg-default bor-b-def">
+    <h2 class="no-margin">select
+        <small class="font-xs text-disabled pad-l-xs">component</small>
+    </h2>
+</div>
+<div class="wrapper-md">
+    <p class="h4 mar-b-sm text-primary">示例</p>
+    <div class="mar-b-sm">
+        <nx-select [options]="options" [value]="selectValue" valueKey="value" textKey="label">
+            <select class="form-control" [(ngModel)]="selectValue" name="selectValue">
+                <option *ngFor="let opt of options" [value]="opt.value">{{opt.label}}</option>
+            </select>
+        </nx-select>
+    </div>
+    <div class="tab-container ng-isolate-scope">
+        <ul class="nav nav-tabs ">
+            <li [ngClass]="{active: tabIndex===1}" class="ng-isolate-scope">
+                <a (click)="changTab(1)">html</a>
+            </li>
+            <li [ngClass]="{active: tabIndex===2}" class="ng-isolate-scope">
+                <a (click)="changTab(2)">typescript</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" [ngClass]="{active: tabIndex===1}">
+                <code-high-light maxHeight="500px" language="html" codeSrc="./assets/sources/select-demo/select-demo.component.html">
+                </code-high-light>
+            </div>
+            <div class="tab-pane " [ngClass]="{active: tabIndex===2}">
+                <code-high-light maxHeight="500px" language="typescript" codeSrc="./assets/sources/select-demo/select-demo.component.ts.code">
+                </code-high-light>
+            </div>
+        </div>
+    </div>
+    <p class="h4 m-b-sm block text-primary">@Input</p>
+    <table class="table table-bordered bg-white">
+        <tbody>
+            <tr>
+                <td>
+                    <p>@Input() <span class="bold">value</span>: any;<span class="text-disabled">//select的值</span></p>
+                    <p>@Input() <span class="bold">options</span>: any[];<span class="text-disabled">//select选项的数据</span></p>
+                    <p>@Input() <span class="bold">valueKey</span>: string;<span class="text-disabled">//value在options元素上的key</span></p>
+                    <p>@Input() <span class="bold">textKey</span>: string;<span class="text-disabled">//显示文字在options元素上的key</span></p>
+                    <p>@Input() <span class="bold">styleClass</span>: string;<span class="text-disabled">//添加的css class</span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="h6 m-b-sm block text-primary">From:<span class="bold text-disabled">SelectModule/SelectComponent</span></p>
+</div>

@@ -1,0 +1,25 @@
+<div class="mar-b-xs">
+    <a class="btn btn-default uploader-input"><i class="fa-folder fa"></i>选择文件
+    <input type="file" multiple="multiple" [uploader]="uploader"/>
+  </a>
+    <a class="text-info mar-l-xs" (click)="uploader.upload()" *ngIf="!uploader.isUploading">上传</a>
+</div>
+<div class="clearfix">
+    <ul class="">
+        <li *ngFor="let file of uploader.queue;let i=index" class="mar-b-xs">
+            <delete-wrap size="xs" (remove)="removeUploadFile(i)">
+                <a class="img-wrap" (click)="gallery.open($event,i)" *ngIf="isImg(file)">
+                    <img [src]="file.dataUrl" />
+                </a>
+                <a *ngIf="!isImg(file)" class="block">
+          {{file.fileName}}
+        </a>
+                <div class="progress no-margin" *ngIf="!file.success&&!file.error">
+                    <div class="progress-bar progress-bar-success" [style.width.%]="file.progress">
+                        <b>{{file.progress}}%</b>
+                    </div>
+                </div>
+            </delete-wrap>
+        </li>
+    </ul>
+</div>

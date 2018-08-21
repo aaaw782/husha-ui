@@ -1,0 +1,21 @@
+<div class="pad-def bg-default bor-b-def">
+    <h2 class="no-margin">hover显示删除按钮<small class="font-xs text-disabled mar-l-xs">component</small></h2>
+</div>
+<div class="wrapper-md">
+    <p class="h4 m-b-sm block text-primary">示例</p>
+    <div class="">
+        <delete-wrap *ngFor="let img of galleryImages;let i=index" size="sm" (remove)="deleteConfirm(i)">
+            <a class="img-wrap">
+                <img [src]="img.a.b" />
+            </a>
+        </delete-wrap>
+    </div>
+    <code-high-light maxHeight="500px" language="html" codeSrc="./assets/sources/delete-wrap-demo/delete-wrap-demo.component.html"></code-high-light>
+    <p class="h4 m-b-sm block text-primary">属性</p>
+    <div class="pad-def bg-white bor-def mar-b-sm">
+        <p>@Input() <b>size</b>:string;<span class="text-disabled">//删除按钮尺寸。默认md,可选：lg、md、sm、xs</span></p>
+        <p>@Output() <b>Output</b>:EventEmitter
+            < any>;<span class="text-disabled">//删除按钮点击事件</span></p>
+    </div>
+    <p class="h6 m-b-sm block text-primary">From:<span class="text-disabled">LayoutModule/DeleteWrapComponent</span></p>
+</div>

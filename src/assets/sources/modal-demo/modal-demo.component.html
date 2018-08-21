@@ -1,0 +1,29 @@
+<button class="btn btn-default" (click)="showModal()">默认模态框</button>
+<button class="btn btn-primary" (click)="showModal('lg')">大模态框</button>
+<button class="btn btn-info" (click)="showModal('sm')">小模态框</button>
+<button class="btn btn-info" (click)="modal.open()">open</button>
+
+
+<modal [(visible)]="isShowModal" [size]="modalSize">
+    <modal-header>
+        <h4 class="modal-title">Modal title </h4>
+    </modal-header>
+    <modal-body>
+        <p style="height: 100px">One fine body&hellip;</p>
+    </modal-body>
+    <modal-footer>
+        <button class="btn btn-default" (click)="closeModal()">关闭</button>
+        <button class="btn btn-primary">保存</button>
+    </modal-footer>
+</modal>
+<modal size="md" #modal>
+    <modal-header>
+        <h4 class="modal-title">Modal title </h4>
+    </modal-header>
+    <modal-body>
+        <p style="height: 100px">这是调用open方法打开的模态框</p>
+    </modal-body>
+    <modal-footer>
+        <button class="btn btn-default" (click)="modal.close()">关闭</button>
+    </modal-footer>
+</modal>
