@@ -1,0 +1,8 @@
+<div class="mar-b-def">
+    <paginator [(index)]="page.index" [count]="page.count" [(pageSize)]="page.pageSize" [changePageSizeAble]="true" [showTotal]="true" [pageSizeOptions]="page.pageSizeOptions" (onChangePage)="onChangePage($event)" (onChangePageError)="onChangePageError($event)"></paginator>
+</div>
+
+<div class="mar-b-def">
+    <paginator [(index)]="page1.index" [count]="page1.count" [(pageSize)]="page1.pageSize" [changePageSizeAble]="true" [showTotal]="true" [pageSizeOptions]="page1.pageSizeOptions" (onChangePage)="onChangePage($event)" (onChangePageError)="onChangePageError($event)"
+        size="sm"></paginator>
+</div>
